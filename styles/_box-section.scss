@@ -1,11 +1,12 @@
 .box-container {
-  margin: 80px 120px 30px;
+  margin: 80px 120px 45px 160px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 45px;
   // justify-content: space-around;
   // flex-direction: row;
   justify-content: center;
+  align-content: center;
   // align-items: center;
 }
 
@@ -17,7 +18,7 @@
   flex-flow: column wrap;
   padding: 40px 40px 20px 40px;
   border: none;
-  border-top-radius: 2px;
+  border-radius: 2px;
   width: 250px;
   box-shadow: 2px 2px 5px rgb(227, 235, 238);
   text-align: center;
@@ -29,6 +30,7 @@
 }
 
 .box:hover {
+  border-top: 3px solid $box-hover-top-border;
   margin-top: -15px;
   margin-bottom: 15px;
 }

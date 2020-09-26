@@ -131,7 +131,7 @@ a:active {
 }
 
 .box-container {
-  margin: 80px 120px 30px;
+  margin: 80px 120px 45px 160px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -140,6 +140,8 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .box {
@@ -155,7 +157,7 @@ a:active {
           flex-flow: column wrap;
   padding: 40px 40px 20px 40px;
   border: none;
-  border-top-radius: 2px;
+  border-radius: 2px;
   width: 250px;
   -webkit-box-shadow: 2px 2px 5px #e3ebee;
           box-shadow: 2px 2px 5px #e3ebee;
@@ -171,6 +173,7 @@ a:active {
 }
 
 .box:hover {
+  border-top: 3px solid #1d314c;
   margin-top: -15px;
   margin-bottom: 15px;
 }
