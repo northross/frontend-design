@@ -1,0 +1,23 @@
+{
+  "name": "frontend-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "deploy": "gh-pages -d frontend-design"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northross/frontend-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northross/frontend-design/issues"
+  },
+  "homepage": "northross.github.io/frontend-design",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
