@@ -24,7 +24,6 @@
 
 .btn:hover {
   // font-family: $helvetica;
-  font-weight: 400;
   // cursor: pointer;
   // height: 60px;
   // width: 180px;
@@ -32,12 +31,21 @@
   // font-size: 16px;
   // padding: 0;
   // margin: 0;
+  font-weight: 400;
   background-color: $btn-canary;
   color: $btn-gray;
 }
 
-// .select {
-//   font-weight: 400;
-//   background-color: $btn-canary;
-//   color: $btn-gray;
-// }
+.select {
+  font-family: $helvetica;
+  cursor: pointer;
+  height: 60px;
+  width: 180px;
+  border: none;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  background-color: $btn-canary;
+  color: $btn-gray;
+}
