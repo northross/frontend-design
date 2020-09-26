@@ -1,0 +1,86 @@
+// Header Section
+@import './variables';
+.hero {
+  background-image: url('../assets/bg_mtns.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  color: $white;
+  position: relative;
+}
+
+// Div containing H1 and P
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: auto;
+  padding: 0 300px;
+}
+
+// H1
+.hero-h {
+  font-size: 50px;
+  letter-spacing: 1.5;
+}
+
+// P w/lorem
+.hero-p {
+  font-family: $helvetica;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.5;
+  color: $background;
+  margin-top: 18px;
+  // padding: 0;
+}
+
+// Span for Home Link
+.home {
+  color: $btn-canary;
+}
+a:active {
+  color: $white;
+}
+
+// Nav - top right
+nav ul {
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  list-style-type: none;
+}
+
+// Items in the Nav ul
+li {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+// Links in the Nav
+a {
+  font-family: $helvetica;
+  font-size: 18px;
+  text-decoration: none;
+  color: $white;
+}
+a:active {
+  color: $btn-canary;
+}
+
+// Top Left Text
+.logo-design-span {
+  color: $btn-canary;
+  font-weight: normal;
+}
+
+.logo-design {
+  font-family: $helvetica;
+  font-size: 30px;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  font-weight: bold;
+}
