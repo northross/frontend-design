@@ -1,5 +1,6 @@
 'use strict';
 
+// Show All Boxes
 const onShowAll = (e) => {
   e.preventDefault();
   console.log('here');
@@ -16,6 +17,7 @@ const onShowAll = (e) => {
   $('.odd').show();
 };
 
+// Show Even Boxes
 const onShowEven = (e) => {
   e.preventDefault();
   // EVEN
@@ -25,18 +27,19 @@ const onShowEven = (e) => {
   // ODD
   $('.odd').hide();
   $('.show-odd').removeClass('select');
-  $('#odd').addClass('btn');
+  $('.show-odd').addClass('btn');
   // ALL
   $('.show-all').removeClass('select');
   $('.show-all').addClass('btn');
 };
 
+// Show Odd Boxes
 const onShowOdd = (e) => {
   e.preventDefault();
   // ODD
   $('.odd').show();
   $('.show-odd').removeClass('btn');
-  $('#odd').addClass('select');
+  $('.show-odd').addClass('select');
   // EVEN
   $('.even').hide();
   $('.show-even').removeClass('select');
@@ -48,9 +51,14 @@ const onShowOdd = (e) => {
 
 // Event Handlers
 $(() => {
-  $('.show-even').show();
-  $('.show-odd').show();
+  // Show Click Events
   $('.show-all').on('click', onShowAll);
   $('.show-even').on('click', onShowEven);
   $('.show-odd').on('click', onShowOdd);
+  // Show Odd and Even Divs
+  $('.show-even').show();
+  $('.show-odd').show();
+  // Show All btn on Select
+  $('.show-all').removeClass('btn');
+  $('.show-all').addClass('select');
 });

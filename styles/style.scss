@@ -1,5 +1,3 @@
-// Google Fonts
-
 // Variables
 @import './variables';
 
@@ -12,11 +10,11 @@ body {
   background-color: $background;
 }
 
-// Major Sections
+// Header Section
 @import './hero-header';
 
 // Button Box
 @import './button-box';
 
-// Content Boxes
+// Content Cases
 @import './box-section';
