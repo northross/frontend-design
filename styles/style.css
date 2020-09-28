@@ -79,7 +79,7 @@ a {
   color: #fcecca;
 }
 
-.nav-menu {
+.hamburger {
   position: absolute;
   top: 20px;
   right: 25px;
@@ -95,7 +95,7 @@ a {
   width: 20px;
 }
 
-.nav-menu .link {
+.hamburger .link {
   height: 3px;
   width: 100%;
   background-color: #fcecca;
@@ -107,7 +107,7 @@ a {
     font-size: 30px;
   }
   .hero-p {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 100px;
   }
   .hero-text {
@@ -126,9 +126,44 @@ a {
   .hero-p {
     padding: 5px 10px;
   }
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: auto;
+  }
+  nav {
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav ul {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    list-style-type: none;
+  }
+  .logo-design {
+    margin: -35px;
+    font-size: 24px;
+  }
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .hero {
     background-image: url("../assets/sm1_mtns.jpeg");
   }
@@ -141,55 +176,47 @@ a {
   .hero-p {
     font-size: 12px;
   }
+  .link {
+    width: 30px;
+    height: 3px;
+    background: #fcecca;
+    margin: 5px;
+  }
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    position: relative;
   }
-  .logo-design {
-    margin: -35px;
-    font-size: 24px;
+  .hamburger {
+    position: absolute;
+    display: block;
+    top: 5;
+    right: 20;
+    z-index: 7;
   }
-  .nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
+  .nav-links {
+    pointer-events: none;
+    position: fixed;
+    background: rgba(105, 101, 121, 0.95);
+    height: 100vh;
     width: 100%;
-  }
-  nav {
-    background-color: black;
+    z-index: 5;
+    top: 0;
+    right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    clip-path: circle(100px at 100% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
   }
-  .navbar-links ul {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .nav-links.open {
+    pointer-events: all;
+    clip-path: circle(1000px at 100% -20%);
+    -webkit-clip-path: circle(1000px at 90% -20%);
   }
-  .navbar-links li {
-    padding-left: 80px;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .nav-links li {
+    font-size: 26px;
   }
 }
 
@@ -218,7 +245,6 @@ a {
   height: 60px;
   width: 180px;
   border: none;
-  border-radius: none;
   font-size: 16px;
   color: white;
   background-color: #696579;
@@ -244,7 +270,13 @@ a {
   color: #696579;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 780px) {
+  .btn-container {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 780px) and (max-width: 550px) {
   .btn {
     margin: 0 auto 3px auto;
     display: block;
@@ -257,12 +289,6 @@ a {
     margin: 0 auto 3px auto;
     display: block;
     width: 85%;
-  }
-}
-
-@media (max-width: 780px) {
-  .btn-container {
-    margin-top: 0;
   }
 }
 

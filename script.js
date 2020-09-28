@@ -61,13 +61,9 @@ $(() => {
   // Show All btn on Select
   $('.show-all').removeClass('btn');
   $('.show-all').addClass('select');
-  // Navbar open menu toggle intended for opening the nav menu
-  //   $('.nav-menu').toggle(
-  //     function () {
-  //       $('.navbar-links').addClass('active');
-  //     },
-  //     function () {
-  //       $('.navbar-links').removeClass('active');
-  //     }
-  //   );
+
+  // Hamburger screen toggle
+  $('.hamburger').click(function () {
+    $('.nav-links').toggleClass('open');
+  });
 });
