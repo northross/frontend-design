@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "deploy": "gh-pages -d frontend-design"
+    "deploy": "gh-pages -d bonfire-challenge"
   },
   "repository": {
     "type": "git",
