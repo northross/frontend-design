@@ -293,13 +293,14 @@ a {
 }
 
 .box-container {
+  max-width: 1350px;
   margin: 60px auto 45px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 30px 40px;
+  padding: 30px 5px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -326,7 +327,10 @@ a {
 }
 
 .box:hover {
+  min-height: 247px;
+  max-height: 317px;
   border-top: 3px solid #1d314c;
+  border-bottom: -3px;
 }
 
 .box-h {

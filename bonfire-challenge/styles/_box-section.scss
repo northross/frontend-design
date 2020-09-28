@@ -1,9 +1,10 @@
 //  Entire container for cases
 .box-container {
+  max-width: 1350px;
   margin: 60px auto 45px auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 40px;
+  padding: 30px 5px;
   justify-content: space-around;
   align-items: center;
 }
@@ -27,7 +28,10 @@
 
 // Entire case hover
 .box:hover {
+  min-height: 247px;
+  max-height: 317px;
   border-top: 3px solid $box-hover-top-border;
+  border-bottom: -3px;
 }
 
 // Case H "BOX NUMBER #"
