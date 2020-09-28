@@ -80,7 +80,7 @@ a {
 }
 
 // Hamburger menu for small devices
-.nav-menu {
+.hamburger {
   position: absolute;
   top: 20px;
   right: 25px;
@@ -91,7 +91,7 @@ a {
   width: 20px;
 }
 
-.nav-menu .link {
+.hamburger .link {
   height: 3px;
   width: 100%;
   background-color: $btn-canary;
@@ -103,7 +103,7 @@ a {
     font-size: 30px;
   }
   .hero-p {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 100px;
   }
   .hero-text {
@@ -122,57 +122,92 @@ a {
   .hero-p {
     padding: 5px 10px;
   }
-}
+  .nav-links {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+  }
 
-@media (max-width: 550px) {
-  .hero {
-    background-image: url('../assets/sm1_mtns.jpeg');
-  }
-  .hero-text {
-    padding: 10px;
-  }
-  .hero-h {
-    font-size: 24px;
-  }
-  .hero-p {
-    font-size: 12px;
-  }
   nav {
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  nav ul {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    list-style-type: none;
+  }
+
   .logo-design {
     margin: -35px;
     font-size: 24px;
   }
+}
 
-  .nav-menu {
-    display: flex;
+@media screen and (max-width: 550px) {
+  .hero {
+    background-image: url('../assets/sm1_mtns.jpeg');
   }
 
-  .navbar-links {
-    display: none;
-    width: 100%;
+  .hero-text {
+    padding: 10px;
+  }
+
+  .hero-h {
+    font-size: 24px;
+  }
+
+  .hero-p {
+    font-size: 12px;
+  }
+
+  .link {
+    width: 30px;
+    height: 3px;
+    background: $btn-canary;
+    margin: 5px;
   }
 
   nav {
-    background-color: black;
-    flex-direction: column;
-    align-items: flex-start;
+    position: relative;
   }
 
-  .navbar-links ul {
+  .hamburger {
+    position: absolute;
+    display: block;
+    top: 5;
+    right: 20;
+    z-index: 7;
+  }
+
+  .nav-links {
+    pointer-events: none;
+    position: fixed;
+    background: $screen;
+    height: 100vh;
     width: 100%;
+    z-index: 5;
+    top: 0;
+    right: 0;
     flex-direction: column;
+    clip-path: circle(100px at 100% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    // display: none;
   }
-
-  .navbar-links li {
-    padding-left: 80px;
-    text-align: center;
+  .nav-links.open {
+    pointer-events: all;
+    clip-path: circle(1000px at 100% -20%);
+    -webkit-clip-path: circle(1000px at 90% -20%);
   }
-
-  .navbar-links.active {
-    display: flex;
+  .nav-links li {
+    font-size: 26px;
   }
 }
