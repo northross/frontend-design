@@ -1,6 +1,6 @@
 //  Entire container for cases
 .box-container {
-  margin: 80px auto 45px auto;
+  margin: 60px auto 45px auto;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 40px;
@@ -14,14 +14,14 @@
   flex-basis: 33.333333%;
   background-color: $white;
   font-family: $helvetica;
-  margin-bottom: 35px;
+  margin: 20px 10px 35px;
   padding: 50px 0 20px;
   border-radius: 3px;
   box-shadow: 2px 2px 5px rgb(227, 235, 238);
-  min-width: 350px;
-  max-width: 425px;
+  min-width: 320px;
+  max-width: 380px;
   min-height: 250px;
-  max-height: 300px;
+  max-height: 320px;
   text-align: center;
 }
 
@@ -77,29 +77,31 @@
   margin: 80px auto 0 auto;
 }
 
-// @media (max-width: 800px) {
-//   .box-container {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-// @media (max-width: 700px) {
-//   .box-container {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-//   .box-container {
-//     height: 200px;
-//     width: 200px;
-//   }
-// }
-// @media (max-width: 500px) {
-//   input[type='text'] {
-//     width: 100%;
-//   }
-//   .box-container {
-//     grid-template-columns: repeat(1fr);
-//   }
-//   .box-container {
-//     height: 300px;
-//     width: 300px;
-//   }
-// }
+@media (max-width: 1024) {
+  .box-b {
+    width: 80%;
+    position: relative;
+    font-size: 14px;
+    border: none;
+    background-color: $btn-gray;
+    color: $white;
+    height: 60px;
+    display: block;
+    margin: 80px auto 0 auto;
+  }
+  .box-p {
+    color: $box-hover-p;
+  }
+}
+
+@media (max-width: 420px) {
+  .box-container {
+    padding: 15px 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .box {
+    // max-width: 150px;
+    padding: 20px;
+  }
+}
